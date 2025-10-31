@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+  <head>  
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="style.css"/>
+    <title>Trending-Login and Signup Design Template Html Css Javascript</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KL9C7XQPJP"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KL9C7XQPJP');
+</script>
+  </head>
+  <body>
+  <div class="containers">
+  <div class="banner">    
+      <img src="https://img.freepik.com/free-photo/mobile-business-analytics_23-2151953953.jpg" class="img-fluid">   
+    
+  </div>
+  <div class="login">
+    
+    <div class="loginbx" id="signup">
+      <div class="header">
+      <h3>Create an Account</h3>
+      <span>Signup</span>
+    </div> 
+      <div class="box">    
+          <label class="custlab">Username</label>
+           <input type="text" placeholder="Username" class="custinp"/>     
+         <i class="fa fa-vcard cusicon" style="font-size:22px"></i>
+      	
+      </div>
+      <div class="box">    
+          <label class="custlab">Email Id</label>
+           <input type="text" placeholder="Email id" class="custinp"/>   
+      <i class="fa fa-user cusicon"  style="font-size:22px"></i>
+      </div>
+    <div class="box">    
+          <label class="custlab">Password</label>
+           <input type="password" id="passid" placeholder="Password" class="custinp"/>      
+      <i class="fa fa-eye-slash cusicon" id="chanicon" onclick="myPass()" style="font-size:22px"></i>
+      </div>
+      <div class="sfbx">
+        <a href="#" onclick="myFunction('login');  return false"; class="toglink">Login?</a>
+           <a href="" onclick="myFunction('forget'); return false";>Forgot Password?</a>
+        </div>
+    <div class="box">    
+    <button class="cutbtn">Submit</button>
+    </div>
+      </div>
+      <div class="lgbox" id="login" >
+        <div class="header">
+      <h3>Login</h3>
+      <span>Welcome</span>
+    </div> 
+      <div class="box">    
+          <label class="custlab">Username</label>
+           <input type="text" placeholder="Username" class="custinp"/>       </div>
+      <div class="box">    
+          <label class="custlab">Password</label>
+           <input type="password" id="passid2" placeholder="Password" class="custinp"/>     
+        <i class="fa fa-eye-slash cusicon"  id="chanicon2"  onclick="myPass2()" style="font-size:22px"></i>
+        </div>  
+         <div class="sfbx">
+        <a href="#" onclick="myFunction('signup'); return false"; class="toglink">Signup?</a>
+           <a href="" onclick="myFunction('forget'); return false";>Forgot Password?</a>
+        </div>
+    <div class="box">    
+    <button class="cutbtn">Submit</button>
+    </div>
+      </div>
+    
+    
+    <div class="forget" id="forget" >
+        <div class="header">
+      <h3>Forgot password</h3>
+      <span>Welcome</span>
+    </div>      
+      <div class="box">    
+          <label class="custlab">Password</label>
+           <input type="password" id="passid2" placeholder="Password" class="custinp"/>     
+        <i class="fa fa-eye-slash cusicon"  id="chanicon2"  onclick="myPass2()" style="font-size:22px"></i>
+        </div>  
+         <div class="sfbx">
+        <a href="#" onclick="myFunction('signup'); return false"; class="toglink">Signup?</a>  
+             <a href="#" onclick="myFunction('login');  return false"; class="toglink">Login?</a>
+        </div>
+    <div class="box">    
+    <button class="cutbtn">Submit</button>
+    </div>
+      </div>
+  </div>  
+  
+</div>
+   <script>
+function myFunction(which){
+  const signup = document.getElementById('signup');
+  const login = document.getElementById('login');
+  const forget = document.getElementById('forget');
+  
+    signup.style.display = 'none';
+    login.style.display ='none';
+    forget.style.display ='none';
+  
+  if(which === 'login'){  
+    login.style.display='flex';   
+  }
+  else if(which ==='signup'){  
+    signup.style.display='flex';    
+}
+   else if(which ==='forget') {  
+    forget.style.display='flex';    
+}
+}
+   
+   function myPass(){
+       const passid = document.getElementById("passid");
+     var chanicon = document.getElementById("chanicon");
+     
+ if(passid.type === "password"){
+   passid.type="text";
+   chanicon.classList.remove("fa-eye-slash");
+   chanicon.classList.add("fa-eye");   
+     }
+     else{
+       passid.type="password";
+       chanicon.classList.add("fa-eye-slash");
+       chanicon.classList.remove("fa-eye");
+     }
+   }
+   function myPass2(){
+     var passid2 =  document.getElementById("passid2");
+     var chanicon2 = document.getElementById("chanicon2");
+     if(passid2.type ==="password"){
+       passid2.type="text";
+       chanicon2.classList.remove("fa-eye-slash");
+       chanicon2.classList.add("fa-eye");            
+     }
+     else{
+       passid2.type="password";
+       chanicon2.classList.add("fa-eye-slash");
+       chanicon2.classList.remove("fa-eye");
+     }
+     
+   }
+</script>
+  </body>
+</html>
